@@ -29,6 +29,7 @@ module.exports = {
     module: {
         rules: [
             { test: /\.(js|jsx)$/, exclude: /node_modules/, use: 'babel-loader' },
+            { test: /\.bundle\.js$/, use: { loader: 'bundle-loader', options: { lazy: true } } },
             { test: /\.scss$|.css$/, use: ["style-loader", "css-loader", "sass-loader"] },
             { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.woff2$|\.eot$|\.ttf$|\.wav$|\.mp3$|\.ico$/, use: 'file-loader' },
         ]

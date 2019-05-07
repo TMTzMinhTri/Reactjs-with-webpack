@@ -7,7 +7,9 @@
     "build": "npx webpack -d",
     "start": "npx webpack-dev-server -d"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bundle-loader": "^0.5.6"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
