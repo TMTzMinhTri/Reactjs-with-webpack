@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const VENDOR_LIBS = [
@@ -18,10 +19,11 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name].js',
     },
     devServer: {
-        port: 3000
+        port: 3000,
+        open: true
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -33,6 +35,17 @@ module.exports = {
             { test: /\.scss$|.css$/, use: ["style-loader", "css-loader", "sass-loader"] },
             { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.woff2$|\.eot$|\.ttf$|\.wav$|\.mp3$|\.ico$/, use: 'file-loader' },
         ]
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+                    name: 'vendor',
+                    chunks: 'all',
+                }
+            }
+        }
     },
     plugins: [
         new HtmlWebpackPlugin({ template: './src/public/index.html' }),

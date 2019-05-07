@@ -11,7 +11,7 @@ export default class App extends React.Component {
             <Header />
             <div>Main</div>
             <div> {this.state.abc} </div>
-            <div class="alert alert-primary" role="alert">
+            <div className="alert alert-primary" role="alert">
                 A simple primary alert—check it out!
             </div>
         </div>
