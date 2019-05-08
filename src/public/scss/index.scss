@@ -1,3 +1,11 @@
-.main {
-    color: red;
-}
+@import "./base/animation";
+@import "./base/base";
+@import "./base/utilities";
+
+@import "./abstracts/mixins";
+@import "./abstracts/variable";
+
+
+@import "./pages/homepage";
+
+@import "./components/footer"
