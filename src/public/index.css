@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: bold;
+  src: url("./scss/Font/Roboto-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  src: url("./scss/Font/Roboto-Italic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 200;
+  src: url("./scss/Font/Roboto-Thin.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url("./scss/Font/Roboto-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url("./scss/Font/Roboto-Regular.ttf") format("truetype"); }
+
+.footer {
+  width: 30px;
+  height: 30px;
+  background: #000; }
